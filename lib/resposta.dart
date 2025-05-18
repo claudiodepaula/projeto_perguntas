@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Resposta extends StatelessWidget {
   final String texto;
@@ -12,7 +13,14 @@ class Resposta extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
         onPressed: onSelect,
-        child: Text(texto, style: TextStyle(color: Colors.white)),
+        child: Text(
+          texto,
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
