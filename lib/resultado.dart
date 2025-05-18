@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Resultado extends StatelessWidget {
   final int pontuacao;
@@ -22,12 +23,24 @@ class Resultado extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Center(child: Text(fraseResultado, style: TextStyle(fontSize: 28))),
+        Center(
+          child: Text(
+            fraseResultado,
+            style: GoogleFonts.poppins(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
         TextButton(
           onPressed: reiniciarApp,
           child: Text(
             'Reiniciar',
-            style: TextStyle(color: Colors.red, fontSize: 20),
+            style: GoogleFonts.poppins(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+              color: Colors.red,
+            ),
           ),
         ),
         // Icon(Icons.replay),

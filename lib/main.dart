@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './questionario.dart';
 import './resultado.dart';
 import './questao.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const PerguntaApp());
 
@@ -62,7 +63,18 @@ class _PerguntaAppState extends State<PerguntaApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Center(child: const Text("Perguntas"))),
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Center(
+            child: Text(
+              "Perguntas",
+              style: GoogleFonts.poppins(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
         body:
             temPerguntaSelecionada
                 ? Questionario(_perguntaSelecionada, _perguntas, _responder)

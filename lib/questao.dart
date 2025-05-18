@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Questao extends StatelessWidget {
   final String texto;
@@ -11,7 +12,7 @@ class Questao extends StatelessWidget {
       margin: EdgeInsets.all(10),
       child: Text(
         texto,
-        style: TextStyle(fontSize: 28),
+        style: GoogleFonts.poppins(fontSize: 26),
         textAlign: TextAlign.center,
       ),
     );
